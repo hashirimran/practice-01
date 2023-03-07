@@ -1,0 +1,51 @@
+{
+  "description": "SetJS post-css starter kit",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp dist --env=production",
+    "deploy-dev": "gulp deploy_aws --env=development",
+    "deploy-prod": "gulp deploy_aws --env=production",
+    "test-prod": "gulp test --env=production",
+    "lint-build": "eslint \"gulpfile.js/**\""
+  },
+  "author": "State Empire",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stateempire/setjs-postcss-starter"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.9",
+    "connect-history-api-fallback": "^1.6.0",
+    "cssnano": "^5.1.7",
+    "del": "^6.0.0",
+    "fs-extra": "^10.1.0",
+    "glob": "^7.2.2",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-html-minifier-terser": "^6.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-size": "^4.0.1",
+    "js-yaml": "^4.1.0",
+    "postcss-for": "^2.1.1",
+    "postcss-hexrgba": "^2.0.1",
+    "postcss-import": "^14.1.0",
+    "postcss-simple-vars": "^6.0.3",
+    "webpack-stream": "^7.0.0"
+  },
+  "browser": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "IE 11"
+  ]
+}
