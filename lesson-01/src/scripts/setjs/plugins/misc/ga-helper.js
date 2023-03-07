@@ -1,9 +1,9 @@
 import eventManager, {eventTypes} from 'setjs/kernel/event-manager.js';
 
-eventManager.addListener(eventTypes.route, 'ga-helper', function() {
+eventManager.addListener(eventTypes.loaded, 'ga-helper', function() {
   if (window.dataLayer && typeof window.dataLayer.push === 'function') {
     window.dataLayer.push({
-        page: location.href,
+        page: window.location.href,
         event: 'pageview',
       });
   }

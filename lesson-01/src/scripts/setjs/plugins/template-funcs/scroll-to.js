@@ -6,7 +6,7 @@ addFuncs({
     diff = +diff;
     if (!$el.data('scrollToDone')) {
       $el.data('scrollToDone', 1).click(function() {
-        $('html, body').animate({scrollTop: $(selector).offset().top + diff});
+        $hbody.animate({scrollTop: $(selector).offset().top + diff});
         if (urlToUpdate) {
           setRoute(urlToUpdate, 1);
         }

@@ -1,6 +1,6 @@
 var handlers = {};
 
-$(document).on('keydown', function (e) {
+$doc.on('keydown', function (e) {
   if (e.keyCode === 27) {
     $.each(handlers, function(index, handler) {
       handler();

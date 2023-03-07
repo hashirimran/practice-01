@@ -2,7 +2,6 @@ var $container = $('#main-content');
 var $prev = $('.initial');
 var blankTime = 0;
 var animDuration = 400;
-var $body = $('body');
 var $blank = $('<div class="blank fadeout"><div class="upper"><div class="inner"></div></div><div class="lower"></div></div>').css({
   transform: 'translateY(100vh)',
   transition: 'all ' + animDuration + 'ms linear'
@@ -27,7 +26,7 @@ function loadContent($content, loaded) {
     $prev = $content;
     $container.append($content);
     $blank.removeClass('animate').addClass('fadeout').css({transform: 'translateY(-100vh)'});
-    $('html,body').scrollTop(0);
+    $hbody.scrollTop(0);
     $.each(bodyStyle, function(key) {
       $body.css(key, '');
     });

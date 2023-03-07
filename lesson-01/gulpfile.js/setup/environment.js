@@ -5,9 +5,12 @@ var production = {name: 'master', mode: 'production'};
 
 var env = {
   local: local,
+  localhost: local,
   development: development,
+  testing: development,
   staging: staging,
   production: production,
+  master: production,
   current: local
 };
 

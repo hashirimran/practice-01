@@ -45,7 +45,6 @@ export function makeQs(params, question) {
 
 // Obsolete. now use this: https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
 // export function copyText(text) {
-//   let $body = $('body');
 //   let input = $('<input type="text">').val(text)[0];
 //   $body.append(input);
 //   input.select();

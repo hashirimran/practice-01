@@ -9,7 +9,7 @@ var speed;
 var speedTime;
 var swipeObj;
 
-$(document).on('mouseup mouseleave touchend touchleave touchcancel', function() {
+$doc.on('mouseup mouseleave touchend touchleave touchcancel', function() {
   if (swipeObj) {
     let movedX, movedY;
     if (Math.abs(diffY) > Math.abs(diffX)) {
@@ -30,7 +30,7 @@ $(document).on('mouseup mouseleave touchend touchleave touchcancel', function() 
   }
 });
 
-$(document).on('mousemove touchmove', function (e) {
+$doc.on('mousemove touchmove', function (e) {
   if (swipeObj) {
     var {eX, eY} = normalizedEventCoords(e);
     var oldSpeed = speed;

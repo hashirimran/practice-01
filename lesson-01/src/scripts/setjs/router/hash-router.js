@@ -1,4 +1,3 @@
-var dloc = document.location;
 var baseRouteHandler;
 
 function processRoute() {
@@ -6,14 +5,14 @@ function processRoute() {
 }
 
 function getPath() {
-  return dloc.hash.replace(/^#(\/)?/, '');
+  return window.location.hash.replace(/^#(\/)?/, '');
 }
 
 export default {
   getPath,
   prefix: '/#/',
   fire: function(route) {
-    dloc.hash = route;
+    window.location.hash = route;
   },
   init: function(routeHandler) {
     baseRouteHandler = routeHandler;

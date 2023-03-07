@@ -1,6 +1,5 @@
 import eventManager, {eventTypes} from 'setjs/kernel/event-manager.js';
 
-var $body = $('body');
 var bodyClass;
 
 eventManager.addListener(eventTypes.view, 'body', function(t, b, height) {

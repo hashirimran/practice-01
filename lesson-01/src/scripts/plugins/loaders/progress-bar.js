@@ -2,7 +2,6 @@ var $container = $('#main-content');
 var $prev = $('.initial');
 var blankTime = 0;
 var animDuration = 300;
-var $body = $('body');
 var $bar = $('<div class="progress-bar">').appendTo($body).hide();
 var bodyStyle = {};
 var bodyCls;
@@ -25,7 +24,7 @@ function loadContent($content, loaded) {
     $prev = $content;
     $container.append($content);
     $bar.css({width: '100%'}).fadeOut(animDuration);
-    $('html,body').scrollTop(0);
+    $hbody.scrollTop(0);
     $.each(bodyStyle, function(key) {
       $body.css(key, '');
     });

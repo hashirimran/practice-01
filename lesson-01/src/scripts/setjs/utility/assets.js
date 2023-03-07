@@ -148,6 +148,7 @@ export function loadImage({url, success, error, complete}) {
     complete && complete(0, args);
   };
   img.src = url;
+  img.crossOrigin = 'anonymous';
   return {
     cancel: function() {
       success = null;

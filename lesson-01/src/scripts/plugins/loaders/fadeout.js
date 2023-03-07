@@ -2,7 +2,6 @@ var $container = $('#main-content');
 var $prev = $('.initial');
 var blankTime = 0;
 var animDuration = 333;
-var $body = $('body');
 var $blank = $('<div class="fadeout-transition"></div>').appendTo($body).hide();
 var bodyStyle = {};
 var bodyCls;
@@ -23,7 +22,7 @@ function loadContent($content, loaded) {
     $prev = $content;
     $container.append($content);
     $blank.fadeOut(animDuration);
-    $('html,body').scrollTop(0);
+    $hbody.scrollTop(0);
     $.each(bodyStyle, function(key) {
       $body.css(key, '');
     });

@@ -12,6 +12,7 @@ function load(cb) {
   var yamlConfig = yaml.load(fs.readFileSync('./config.yml', 'utf8'));
   var currentConfig = Object.assign(yamlConfig, yamlConfig[env.current.name]);
   Object.assign(settings, currentConfig, getLocalConfig());
+  settings.api_url = '//' + currentConfig.app_url;
   settings.timestamp = Date.now();
   cb && cb();
 }

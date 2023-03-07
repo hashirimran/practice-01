@@ -9,6 +9,7 @@ var {images} = require('./tasks/images.js');
 var {scripts} = require('./tasks/scripts.js');
 var {views} = require('./tasks/views.js');
 var {serve} = require('./tasks/serve.js');
+var {deployCheck, deploy} = require('./tasks/deploy.js');
 
 var dist = gulp.series(
   clean,
@@ -27,3 +28,4 @@ exports.scripts = scripts;
 exports.dist = dist;
 exports.styles = styles;
 exports.default = gulp.series(dist, serve);
+exports.deploy = gulp.series(deployCheck, dist, deploy);

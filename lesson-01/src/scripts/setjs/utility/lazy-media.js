@@ -18,8 +18,8 @@ eventManager.addListener(eventTypes.view, 'lazy-media', function(top, bottom, he
 setInterval(manageVideos, 1000);
 
 function manageVideos() {
-  var width = $(window).width() + 200;
-  var height = $(window).height();
+  var width = $win.width() + 200;
+  var height = $win.height();
   pending.filter(x => x.isReady).forEach(function(item) {
     var {left, top, right, bottom} = item.$el[0].getBoundingClientRect();
     if (right < -200 || left > width || bottom < 0 || top > height) {
@@ -97,7 +97,7 @@ export function lazyMedia(opts) {
   }
   function processLazy() {
     if ($.contains(document.body, $el[0])) {
-      if (!loadFullMedia(opts, $(window).height())) {
+      if (!loadFullMedia(opts, $win.height())) {
         pending.push(opts);
       }
     } else {

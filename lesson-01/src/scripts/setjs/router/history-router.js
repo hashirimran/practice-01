@@ -5,7 +5,7 @@ function processRoute() {
 }
 
 function getPath() {
-  return document.location.pathname.replace(/^(\/)/, '');
+  return window.location.pathname.replace(/^(\/)/, '');
 }
 
 export default {

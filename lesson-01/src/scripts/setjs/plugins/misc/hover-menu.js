@@ -2,13 +2,13 @@ import eventManager, {eventTypes} from 'setjs/kernel/event-manager.js';
 import {pointInside} from 'setjs/utility/geometry.js';
 
 eventManager.addListener(eventTypes.init, 'hover-menu', function() {
-  $(document).on('mouseenter', '.hover-dropdown-btn', function() {
+  $doc.on('mouseenter', '.hover-dropdown-btn', function() {
     var $menu = $(this).closest('.hover-dropdown');
     $('.hover-dropdown.open').removeClass('open');
     $menu.addClass('open');
   });
 
-  $(document).on('mouseleave', '.hover-dropdown', function(e) {
+  $doc.on('mouseleave', '.hover-dropdown', function(e) {
     var $menu = $(this);
     var $list = $menu.find('.hover-dropdown-list');
     var $btn = $menu.find('.hover-dropdown-btn');

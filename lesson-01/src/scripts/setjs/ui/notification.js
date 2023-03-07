@@ -14,7 +14,7 @@ export default function notification(msgObj, cls, sticky) {
 
 export function errorNotification(callback) {
   return function (msgObj) {
-    notification(msgObj, 'error');
+    (msgObj.message || msgObj) && notification(msgObj, 'error');
     callback && callback(msgObj);
   };
 }

@@ -11,22 +11,19 @@ function processSlot($item, comp, data, config) {
   let rd = comp.rComp && comp.rComp.data || data;
   let template = (config.tf && (rd[config.tf] || func(config.tf))(config, comp, data)) || getConfigTemplate('slot', config);
   let slotComp = createComponent(template, configData(config, data), comp.actions, comp);
-  let $named;
   $item.empty();
+  storeItemByName(comp, config.name, slotComp);
   if (slotComp) {
-    storeItemByName(comp, config.name, slotComp);
     if (config.replace) {
       $item.replaceWith(slotComp.$root);
-      $named = slotComp.$root;
     } else {
       $item.append(slotComp.$root);
-      $named = $item;
     }
   } else if (config.replace) {
     $item.remove();
   }
-  if (comp['$' + config.name]) {
-    comp['$' + config.name] = $named;
+  if (config.replace && comp['$' + config.name]) {
+    comp['$' + config.name] = slotComp && slotComp.$root;
   }
 }
 
@@ -117,7 +114,7 @@ function createComponent(templateStr, data, actions, pComp) {
       if (slot.config.replace) {
         slot.$item = comp[name].$root;
       }
-      setjs.compUpdate(comp[name].$root);
+      comp[name] && setjs.compUpdate(comp[name].$root);
       slotComp && cleanupWatch(slotComp.data);
     },
     renderList: function() {

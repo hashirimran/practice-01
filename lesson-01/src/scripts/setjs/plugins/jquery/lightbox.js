@@ -4,8 +4,8 @@ import {viewUpdate} from 'core/events.js';
 
 eventManager.addListener(eventTypes.route, 'lightbox', function() {
   $('.lightbox, .sidebar').remove();
-  $(document).off('keydown.lightbox');
-  $('body').removeClass('lightbox-open sidebar-open');
+  $doc.off('keydown.lightbox');
+  $body.removeClass('lightbox-open sidebar-open');
 });
 
 $.fn.lightbox = function (opts = {}) {
@@ -26,10 +26,10 @@ $.fn.lightbox = function (opts = {}) {
   function destroy(done) {
     if (!lightbox.closed) {
       lightbox.closed = true;
-      $(document).off('keydown.lightbox');
-      $('body').addClass(closingCls);
+      $doc.off('keydown.lightbox');
+      $body.addClass(closingCls);
       setTimeout(function(){
-        $('body').removeClass(openCls).removeClass(closingCls);
+        $body.removeClass(openCls).removeClass(closingCls);
         $lightbox.remove();
         done && done();
         viewUpdate();
@@ -54,7 +54,7 @@ $.fn.lightbox = function (opts = {}) {
     }
   }
 
-  $(document).on('keydown.lightbox', function (e) {
+  $doc.on('keydown.lightbox', function (e) {
     if (e.keyCode === 27) {
       close();
     } else if (lightbox.carousel && $(e.target).hasClass(openCls)) {
@@ -69,9 +69,9 @@ $.fn.lightbox = function (opts = {}) {
   $lightbox.append(this.data('lightbox', lightbox)).data('lightbox', lightbox);
   initCarousel();
   !opts.noClose && addCloseBtn();
-  $('body').addClass(openingCls);
+  $body.addClass(openingCls);
   setTimeout(function(){
-    $('body').addClass(openCls).removeClass(openingCls);
+    $body.addClass(openCls).removeClass(openingCls);
     opts.created && opts.created(lightbox);
     viewUpdate();
   }, delay);

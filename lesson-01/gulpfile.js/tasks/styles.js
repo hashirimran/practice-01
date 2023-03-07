@@ -7,13 +7,14 @@ var {paths, env} = require('../setup.js');
 
 let plugins = [
   require('postcss-import'),
-  require('postcss-for'),
-  require('postcss-simple-vars'),
+  // require('postcss-for'),
+  // require('postcss-simple-vars'),
+  require('postcss-advanced-variables'),
   require('postcss-hexrgba'),
   require('autoprefixer'),
 ];
 
-if (env.current.mode == env.production.mode) {
+if (env.current.mode == env.master.mode) {
   plugins.push(require('cssnano'));
 }
 

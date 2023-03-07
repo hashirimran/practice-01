@@ -1,6 +1,6 @@
 import {jqFuncs} from 'core/acts-funcs.js';
 
-jqFuncs(['accordion', 'forceNumber', 'instagram', 'marquee', 'rollingCopy', 'selectize']);
+jqFuncs([]);
 
 /*------------setjs plugins-----------*/
 // import 'setjs/plugins/jquery/accordion.js';
@@ -9,13 +9,13 @@ jqFuncs(['accordion', 'forceNumber', 'instagram', 'marquee', 'rollingCopy', 'sel
 // import 'setjs/plugins/jquery/form-json.js';
 // import 'setjs/plugins/jquery/lightbox.js';
 
-import 'setjs/plugins/misc/animate-visible.js';
+// import 'setjs/plugins/misc/animate-visible.js';
 // import 'setjs/plugins/misc/dropdown-menu.js';
 
 // import 'setjs/plugins/template-actions/gdpr.js';
 
 import 'setjs/plugins/template-funcs/basic-filters.js';
-// import 'setjs/plugins/template-funcs/debug.js';
+import 'setjs/plugins/template-funcs/debug.js';
 import 'setjs/plugins/template-funcs/misc.js';
 
 
