@@ -9,68 +9,11 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url(/src/images/social/bg-img.jpeg);
+  background-image: url(https://images.unsplash.com/photo-1610804270319-0d2c2efd1ca6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
   background-position: center;
   background-size: cover;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1.5em;
-  padding-left: 8%;
-  padding-right: 8%;
   position: relative;
-  z-index: 2;
-}
-nav a {
-  list-style-type: none;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0 1.5rem;
-}
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: larger;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-.logo {
-  font-size: 35px;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-span {
-  color: rgb(201, 192, 192);
-}
-.logo:hover {
-  transition: 0.4s;
-  transform: scale(1.1);
-}
-.btn {
-  color: black;
-  background-color: #dab9f3;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 6px;
-  transition: transform 0.4;
-  cursor: pointer;
-}
-.btn:hover {
-  transform: scale(1.2);
-}
-.about {
-  border: 2px solid #dab9f3;
-  padding: 0.5rem 0.7rem;
-}
-nav ul li a:hover {
-  border: 2px solid #dab9f3;
-  padding: 0.5rem 0.7rem;
-  transition: 0.6s;
+  z-index: 3;
 }
 .waves .wavy {
   position: absolute;

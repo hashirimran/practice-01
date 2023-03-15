@@ -6,7 +6,7 @@ jqFuncs([]);
 // import 'setjs/plugins/jquery/accordion.js';
 // import 'setjs/plugins/jquery/carousel.js';
 // import 'setjs/plugins/jquery/force-number.js';
-// import 'setjs/plugins/jquery/form-json.js';
+import 'setjs/plugins/jquery/form-json.js';
 // import 'setjs/plugins/jquery/lightbox.js';
 
 // import 'setjs/plugins/misc/animate-visible.js';
